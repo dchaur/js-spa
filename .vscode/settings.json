@@ -1,0 +1,15 @@
+{
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "javascript.format.enable": false,
+  "javascript.suggest.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true
+}
