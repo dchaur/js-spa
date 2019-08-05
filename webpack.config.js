@@ -38,18 +38,6 @@ module.exports = {
           { loader: 'sass-loader', options: { sourceMap: true } },
         ],
       },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              // outputPath: 'images/',
-              // publicPath: 'images/',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [

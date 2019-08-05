@@ -1,4 +1,4 @@
-import StatsPresenter from './stats.prenter';
+import StatsPresenter from './stats.presenter';
 
 const StatsLoader = {
   init() {
