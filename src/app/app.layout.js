@@ -1,5 +1,3 @@
-const AppLayout = model => `<section class="app">
-<button id="btn-load-stats" class="btn-default">${model.statsLabel}</button>
-</section>`;
+const AppLayout = () => '<section class="app"></section>';
 
 export default AppLayout;

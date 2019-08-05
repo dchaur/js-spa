@@ -13,30 +13,21 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
   },
   entry: {
-    app: ['@babel/polyfill', './src/main.js', './src/styles/main.scss']
+    app: ['@babel/polyfill', './src/main.js', './src/styles/main.scss'],
   },
   output: {
     path: path.join(basePath, distPath),
-    filename: '[chunkhash][name].js'
+    filename: '[chunkhash][name].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: ['babel-loader', 'eslint-loader']
-      },
-      {
-        test: /\.css$/,
-        exclude: /(node_modules)/,
-        use: [
-          MiniCSSExtract.loader,
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'postcss-loader', options: { sourceMap: true } }
-        ]
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.scss$/,
@@ -44,9 +35,8 @@ module.exports = {
         use: [
           MiniCSSExtract.loader,
           { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } }
-        ]
+          { loader: 'sass-loader', options: { sourceMap: true } },
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -56,21 +46,21 @@ module.exports = {
             options: {
               // outputPath: 'images/',
               // publicPath: 'images/',
-            }
-          }
-        ]
-      }
-    ]
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
       filename: indexOutput,
-      template: indextInput
+      template: indextInput,
     }),
     new MiniCSSExtract({
       filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
-  ]
+      chunkFilename: '[id].css',
+    }),
+  ],
 };

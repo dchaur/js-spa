@@ -1,5 +1,5 @@
-# Javascript SPA
-This is a basic SPA (single page application) application, it uses ES6, SASS
+# Pure JS dashboard
+The aim of this project is build JS dashboard without any JS framework. It uses ES6, webpack, sass and D3JS
 
 ## Installation
 

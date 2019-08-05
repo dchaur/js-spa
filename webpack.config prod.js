@@ -11,27 +11,18 @@ const indexOutput = 'index.html';
 module.exports = {
   mode: 'development',
   entry: {
-    app: ['@babel/polyfill', './src/index.js']
+    app: ['@babel/polyfill', './src/index.js'],
   },
   output: {
     path: path.join(basePath, distPath),
-    filename: '[chunckhash][name].js'
+    filename: '[chunckhash][name].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: ['babel-loader', 'eslint-loader']
-      },
-      {
-        test: /\.css$/,
-        exclude: /(node_modules)/,
-        use: [
-          MiniCSSExtract.loader,
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader' }
-        ]
+        use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.scss$/,
@@ -39,30 +30,29 @@ module.exports = {
         use: [
           MiniCSSExtract.loader,
           { loader: 'css-loader' },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' }
-        ]
+          { loader: 'sass-loader' },
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
         user: [
           {
             loader: 'file-loader',
-            options: {}
-          }
-        ]
-      }
-    ]
+            options: {},
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HTMLWebpackPlugin({
       filename: indexOutput,
-      template: indextInput
+      template: indextInput,
     }),
-    new MiniCssExtractPlugin({
+    new MiniCSSExtract({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[id].css',
     }),
-    new OptimizeCssAssetsPlugin()
-  ]
+    new OptimizeCssAssetsPlugin(),
+  ],
 };
