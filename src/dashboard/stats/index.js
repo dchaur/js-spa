@@ -1,7 +1,7 @@
-import DonutsPresenter from './donuts/donuts.presenter';
-import StatsModel from './stats.model';
+import Donuts from './donuts';
+import StatsModel from './model';
 
-const StatsPresenter = {
+const Stats = {
 
   init() {
     this.appElement = document.querySelector('#app');
@@ -26,9 +26,9 @@ const StatsPresenter = {
     };
 
     let statsHTMLContainer = '<section class="stats">';
-    statsHTMLContainer += DonutsPresenter.render(this.revenueParams);
-    statsHTMLContainer += DonutsPresenter.render(this.impressionsParams);
-    statsHTMLContainer += DonutsPresenter.render(this.visitsParams);
+    statsHTMLContainer += Donuts.render(this.revenueParams);
+    statsHTMLContainer += Donuts.render(this.impressionsParams);
+    statsHTMLContainer += Donuts.render(this.visitsParams);
     statsHTMLContainer += '</section>';
     this.appElement.innerHTML = statsHTMLContainer;
 
@@ -36,10 +36,10 @@ const StatsPresenter = {
   },
 
   afterRender() {
-    DonutsPresenter.afterRender(this.revenueParams);
-    DonutsPresenter.afterRender(this.impressionsParams);
-    DonutsPresenter.afterRender(this.visitsParams);
+    Donuts.afterRender(this.revenueParams);
+    Donuts.afterRender(this.impressionsParams);
+    Donuts.afterRender(this.visitsParams);
   },
 };
 
-export default StatsPresenter;
+export default Stats;

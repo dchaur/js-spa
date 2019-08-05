@@ -1,6 +1,6 @@
-import StatsModule from './stats/stats.loader';
+import Stats from './stats';
 
-const AppPresenter = {
+const Dashboard = {
   init() {
     this.appElement = document.querySelector('#app');
     this.render();
@@ -8,8 +8,8 @@ const AppPresenter = {
 
   render() {
     this.appElement.innerHTML = '<section class="app"></section>';
-    StatsModule.init();
+    Stats.init();
   },
 };
 
-export default AppPresenter;
+export default Dashboard;

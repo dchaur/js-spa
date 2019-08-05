@@ -1,9 +1,9 @@
 import * as d3 from 'd3';
-import DonutsView from './donuts.view';
+import Template from './template';
 
-const DonutsPresenter = {
+const Donuts = {
   render(params) {
-    return DonutsView(params);
+    return Template(params);
   },
 
   afterRender(params) {
@@ -72,4 +72,4 @@ const DonutsPresenter = {
 
 };
 
-export default DonutsPresenter;
+export default Donuts;

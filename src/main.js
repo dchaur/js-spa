@@ -1,3 +1,3 @@
-import AppLoader from './app/app.loader';
+import Dashboard from './dashboard';
 
-AppLoader.init();
+Dashboard.init();

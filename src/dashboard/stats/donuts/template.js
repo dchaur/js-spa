@@ -1,4 +1,4 @@
-const DonutsView = ((params) => {
+const Template = ((params) => {
   let donutSection = '<section id="visits-block" class="pie">';
   donutSection += `<div id="visits-chart-${params.title}"></div>`;
   donutSection += '<ul class="legend">';
@@ -17,4 +17,4 @@ const DonutsView = ((params) => {
   return donutSection;
 });
 
-export default DonutsView;
+export default Template;
