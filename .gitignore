@@ -3,3 +3,4 @@ dist/
 .eslintcache
 coverage
 .nyc_output
+.vscode
