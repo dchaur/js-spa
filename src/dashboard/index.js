@@ -1,15 +1,18 @@
-import Stats from './stats';
+import Impressions from './components/impressions';
+import Revenue from './components/revenue';
+import Visits from './components/visits';
 
-const Dashboard = {
+export default {
   init() {
-    this.appElement = document.querySelector('#app');
+    this.dashContainer = document.getElementById('dash-container');
     this.render();
   },
 
-  render() {
-    this.appElement.innerHTML = '<section class="app"></section>';
-    Stats.init();
+  async render() {
+    await Promise.all([
+      Revenue.render(this.dashContainer),
+      Impressions.render(this.dashContainer),
+      Visits.render(this.dashContainer),
+    ]);
   },
 };
-
-export default Dashboard;
