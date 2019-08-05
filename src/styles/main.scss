@@ -26,8 +26,12 @@ main {
   overflow-y: auto;
 }
 
+.stats {
+  margin: 10px auto;
+  text-align: center;
+}
 .pie {
-  margin: 20px;
+  margin: 12px;
 }
 
 #visits-block {
@@ -52,10 +56,4 @@ main {
       }
     }
   }
-}
-@include sticky-footer(30px);
-
-footer {
-  color: #ffffff;
-  background: #6DCB14;
 }

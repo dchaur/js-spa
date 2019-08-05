@@ -1,25 +1,26 @@
 import * as d3 from 'd3';
-import VisitsModel from './visits.model';
-import VisitsLayout from './visits.layout';
+import DonutsView from './donuts.view';
 
-const VisitsComponent = {
-  render() {
-    return VisitsLayout(VisitsModel);
+const DonutsPresenter = {
+  render(params) {
+    return DonutsView(params);
   },
 
-  afterRender() {
-    const chartTitle = 'VISITS';
-    const total = this.formatNumber(VisitsModel.reduce((a, b) => a + b.value, 0));
+  afterRender(params) {
+    const chartTitle = params.title;
+    const model = params.data;
+    const total = this.formatNumber(model.reduce((a, b) => a + b.value, 0));
+    const donutColors = model.map(item => item.color);
 
     const width = 160;
     const height = 160;
     const thickness = 10;
 
     const radius = Math.min(width, height) / 2;
-    const color = d3.scaleOrdinal(['#F4C136', '#BF561D']);
+    const color = d3.scaleOrdinal(donutColors);
 
     // Append SVG attributes and append g to the SVG
-    const svg = d3.select('#visits-chart')
+    const svg = d3.select(`#visits-chart-${chartTitle}`)
       .append('svg')
       .attr('class', 'pie')
       .attr('width', width)
@@ -40,7 +41,7 @@ const VisitsComponent = {
 
     // Calculate SVG paths and fill in the colors
     const path = g.selectAll('path')
-      .data(pie(VisitsModel))
+      .data(pie(model))
       .enter()
       .append('g');
 
@@ -71,4 +72,4 @@ const VisitsComponent = {
 
 };
 
-export default VisitsComponent;
+export default DonutsPresenter;

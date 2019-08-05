@@ -1,3 +1,3 @@
-import App from './app/app.module';
+import AppLoader from './app/app.loader';
 
-App.init();
+AppLoader.init();
