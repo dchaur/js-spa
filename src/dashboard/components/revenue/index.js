@@ -1,7 +1,7 @@
 import Donuts from '../../donuts';
 import { getRevenue } from '../../service';
 
-const Visits = {
+const Revenue = {
   async render(parentContainer) {
     const data = await getRevenue();
     const params = {
@@ -14,4 +14,4 @@ const Visits = {
   }
 };
 
-export default Visits;
+export default Revenue;

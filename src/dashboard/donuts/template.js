@@ -5,7 +5,7 @@ const Template = ((params) => {
   donutSection += '<ul class="legend">';
 
   params.data.forEach((item) => {
-    donutSection += '<li>';
+    donutSection += '<li class="legend-box">';
     donutSection += `<span class="title" style="color: ${item.color}">${item.type}</span>`;
     donutSection += `<span class="percent">${item.percent}%</span>`;
     donutSection += `<span class="value">${item.value} ${currency}</span>`;

@@ -23,9 +23,9 @@ jest.mock('../src/dashboard/service/', () => ({
 }));
 
 describe('Dashboard component', () => {
-  it('should build the dashboard correctly', async () => {
+  test('should build the dashboard correctly', async () => {
     document.body.innerHTML = '<section id="dash-container" class="stats"></section>'; 
-    let renderVisits = jest.spyOn(Visits, 'render');
+    const renderVisits = jest.spyOn(Visits, 'render');
     Dashboard.init();   
     expect(renderVisits).toHaveBeenCalled();
   });

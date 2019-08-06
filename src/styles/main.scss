@@ -1,24 +1,22 @@
 @import "reset.scss";
 @import "mixins/sticky-footer.scss";
+@import "utils/variables.scss";
 
-$primary-color: #333;
-$main-font: Helvetica, sans-serif;
-
-body {
+body{
   font: 100% $main-font;
   color: $primary-color;
 }
 
-header {
+.head {
   height: 60px;
-  background: #88C752;
+  background: $header-color;
   color: #ffffff;
   display: flex;
   align-items: center;
   padding: 0 52px;
 }
 
-main {
+.main-section {
   display: flex;
   justify-content: center;
   height: calc(100vh - 140px);
@@ -40,7 +38,7 @@ main {
   display: inline-block;
   text-align: center;
   .legend {
-    li {    
+    .legend-box {    
       display: inline-block;
       margin: 0 12px;
 
