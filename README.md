@@ -6,6 +6,7 @@ The aim of this project is build JS dashboard without any JS framework. It uses 
 ```
 npm install
 ```
+<hr />
 
 ## Usage
 
@@ -13,11 +14,19 @@ Create the build
 ```
 npm run build
 ```
+<hr />
 
-Use local server
+
+## Build live example
+https://dchaur.github.io/pure-js-dashboard/
+
+<hr />
+
+## Local server
 ```
 npm start
 ```
+<hr />
 
 ## Testing
 
