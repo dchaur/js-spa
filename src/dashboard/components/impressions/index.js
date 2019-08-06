@@ -3,26 +3,15 @@ import { getImpressions } from '../../service';
 
 const Visits = {
   async render(parentContainer) {
-    try {
-      const data = await getImpressions();
+    const data = await getImpressions();
+    const params = {
+      title: 'IMPRESSIONS',
+      data,
+      isCurrency: false
+    };
 
-      if (!data) {
-        throw new Error('Failed retrieving visits');
-      }
-
-      const params = {
-        title: 'IMPRESSIONS',
-        data,
-        isCurrency: false,
-      };
-
-      const view = Donuts.createView(params);
-      parentContainer.appendChild(view);
-      Donuts.buildChart(params);
-    } catch (error) {
-      throw new Error(error.message);
-    }
-  },
+    Donuts.build(parentContainer, params);
+  }
 };
 
 export default Visits;

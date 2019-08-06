@@ -12,7 +12,7 @@ export default {
     await Promise.all([
       Revenue.render(this.dashContainer),
       Impressions.render(this.dashContainer),
-      Visits.render(this.dashContainer),
+      Visits.render(this.dashContainer)
     ]);
-  },
+  }
 };

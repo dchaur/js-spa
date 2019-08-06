@@ -4,8 +4,15 @@ import Template from './template';
 const formatNumber = num => num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
 
 const Donuts = {
-  createView(initParams) {
-    const params = Object.assign({}, initParams);
+
+  build(container, params) {
+    const view = this.createView(params);
+    container.appendChild(view);
+
+    this.buildChart(params);
+  },
+
+  createView(params) {
     const chartSection = document.createElement('section');
 
     chartSection.setAttribute('class', 'pie-block ');
@@ -71,7 +78,7 @@ const Donuts = {
       .attr('class', 'inner-circle')
       .attr('fill', '#333333')
       .text(() => total);
-  },
+  }
 };
 
 export default Donuts;
