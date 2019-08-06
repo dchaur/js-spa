@@ -1,5 +1,4 @@
 node_modules
-dist/
 .eslintcache
 coverage
 .nyc_output
