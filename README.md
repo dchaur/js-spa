@@ -3,12 +3,35 @@ The aim of this project is build JS dashboard without any JS framework. It uses 
 
 ## Installation
 
-`npm install`
+```
+npm install
+```
 
 ## Usage
 
 Create the build
-`npm run build`
+```
+npm run build
+```
 
 Use local server
-`npm start`
+```
+npm start
+```
+
+## Testing
+
+Run tests
+```
+npm test
+```
+
+Live tests
+```
+npm run test:live
+```
+
+Coverage
+```
+npm run test:coverage
+```

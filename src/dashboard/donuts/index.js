@@ -38,7 +38,7 @@ const Donuts = {
     const radius = Math.min(width, height) / 2;
     const color = d3.scaleOrdinal(donutColors);
 
-    const svg = d3.select(`#visits-chart-${chartTitle}`)
+    const svg = d3.select(`#chart-${chartTitle}`)
       .append('svg')
       .attr('class', 'pie')
       .attr('width', width)

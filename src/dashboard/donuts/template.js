@@ -1,5 +1,5 @@
 const Template = ((params) => {
-  let donutSection = `<div id="visits-chart-${params.title}"></div>`;
+  let donutSection = `<div id="chart-${params.title}"></div>`;
   const currency = (params.isCurrency) ? '€' : '';
 
   donutSection += '<ul class="legend">';
