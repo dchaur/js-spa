@@ -7,6 +7,6 @@ describe('Impressions component', () => {
     const dashContainer = document.getElementById('dash-container');
     await Impressions.render(dashContainer);
     const chart = document.querySelector('#chart-IMPRESSIONS');
-    expect(document.querySelector('.pie-block')).toContainElement(chart);
+    expect(document.querySelector('.chart-block')).toContainElement(chart);
   });
 });

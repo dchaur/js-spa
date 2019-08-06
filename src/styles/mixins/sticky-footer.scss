@@ -13,7 +13,7 @@
   }
   #{$wrapper-selector} {
     min-height: 100%;
-    height: auto !important;
+    height: auto;
     height: 100%;
     margin-bottom: -$footer-height;
     #{$container-selector} {

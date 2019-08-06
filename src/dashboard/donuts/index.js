@@ -15,7 +15,7 @@ const Donuts = {
   createView(params) {
     const chartSection = document.createElement('section');
 
-    chartSection.setAttribute('class', 'pie-block ');
+    chartSection.setAttribute('class', 'chart-block ');
     params.data.forEach(el => formatNumber(el.value));
     params.data.map(el => formatNumber(el.value));
     chartSection.innerHTML = Template(params);
@@ -40,7 +40,7 @@ const Donuts = {
 
     const svg = d3.select(`#chart-${chartTitle}`)
       .append('svg')
-      .attr('class', 'pie')
+      .attr('class', 'donut')
       .attr('width', width)
       .attr('height', height);
 

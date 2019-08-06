@@ -24,35 +24,37 @@ body{
   overflow-y: auto;
 }
 
-.stats {
+.dash {
   margin: 10px auto;
   text-align: center;
 }
-.pie {
+
+.donut {
   margin: 12px;
 }
 
-.pie-block {
+.chart-block {
   margin: 12px;
   position: relative;
   display: inline-block;
   text-align: center;
-  .legend {
-    .legend-box {    
-      display: inline-block;
-      margin: 0 12px;
 
-      .title {
-        text-transform: capitalize;
-        display: block;
-      }
-      .percent {
-        font-weight: 500;
-        margin: 0.3em;
-      }
-      .value {
-        color: #cccccc;
-      }
+  .legend-box {
+    display: inline-block;
+    margin: 0 12px;
+
+    .title {
+      text-transform: capitalize;
+      display: block;
+    }
+
+    .percent {
+      font-weight: 500;
+      margin: 0.3em;
+    }
+
+    .value {
+      color: #cccccc;
     }
   }
 }
